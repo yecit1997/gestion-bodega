@@ -1,6 +1,7 @@
 django
 djangorestframework
 Pillow
-psycopg2-binary
+# psycopg2-binary
+psycopg[binary]
 django-cors-headers
 python-dotenv
