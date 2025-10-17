@@ -1,0 +1,27 @@
+# Django-specific files
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media/ # Or whatever folder you use for user-uploaded files
+static_cdn/ # If you collect static files here for production
+
+# Virtual Environment
+.env
+venv/
+.venv/
+env/
+
+# IDE-specific files (e.g., PyCharm)
+.idea/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Other common files
+.coverage
+.tox/
+.eggs/
