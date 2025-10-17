@@ -2,7 +2,10 @@ from django.db import models
 from apps.categoria.models import Categoria
 from apps.proveedor.models import Proveedor
 
+import uuid
+
 class Producto(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(blank=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)

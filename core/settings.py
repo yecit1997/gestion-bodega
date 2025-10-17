@@ -30,7 +30,7 @@ DJANGO_APPS = [
 ]
 
 # Local apps
-LOCAL_APPS = [
+PROJECT_APPS = [
     'apps.producto',
     'apps.categoria',
     'apps.proveedor',
@@ -42,7 +42,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
 ]
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

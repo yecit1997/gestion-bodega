@@ -1,7 +1,10 @@
 from django.db import models
 from apps.producto.models import Producto
 
+import uuid
+
 class Movimiento(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     ENTRADA = 'E'
     SALIDA = 'S'
     TIPO_CHOICES = [
