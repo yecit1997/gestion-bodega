@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "bodega_db",
-        "USER": "postgres",
-        "PASSWORD": "Yecit19970730",
-        "HOST": "localhost",
-        "PORT": "5432",
+        "NAME": os.getenv('NAME_DB'),
+        "USER": os.getenv('USER_DB'),
+        "PASSWORD": os.getenv('PASSWORD_DB'),
+        "HOST": os.getenv('HOST_DB'),
+        "PORT": os.getenv('PORT_DB'),
         "OPTIONS": { # Agrega la sección OPTIONS
             "client_encoding": "UTF8",
             # Otras opciones si las necesitas:
