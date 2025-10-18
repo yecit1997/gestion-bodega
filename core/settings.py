@@ -77,29 +77,29 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv('NAME_DB'),
-        "USER": os.getenv('USER_DB'),
-        "PASSWORD": os.getenv('PASSWORD_DB'),
-        "HOST": os.getenv('HOST_DB'),
-        "PORT": os.getenv('PORT_DB'),
-        "OPTIONS": { # Agrega la sección OPTIONS
-            "client_encoding": "UTF8",
-            # Otras opciones si las necesitas:
-            # "options": "-c default_transaction_isolation=read committed",
-            # "options": "-c timezone=UTC",
-        },
-    },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'Mydb.sqlite3',
+    }
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": os.getenv('NAME_DB'),
+#         "USER": os.getenv('USER_DB'),
+#         "PASSWORD": os.getenv('PASSWORD_DB'),
+#         "HOST": os.getenv('HOST_DB'),
+#         "PORT": os.getenv('PORT_DB'),
+#         "OPTIONS": { # Agrega la sección OPTIONS
+#             "client_encoding": "UTF8",
+#             # Otras opciones si las necesitas:
+#             # "options": "-c default_transaction_isolation=read committed",
+#             # "options": "-c timezone=UTC",
+#         },
+#     },
+# }
 
 
 # Password validation
