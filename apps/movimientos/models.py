@@ -19,6 +19,10 @@ class Movimiento(models.Model):
     observaciones = models.TextField(blank=True)
 
     def __str__(self):
+        '''
+        Esta funcion get_tipo_display() es proporcionada por Django para obtener la representación legible del campo 'tipo' 
+        basado en las opciones definidas en TIPO_CHOICES.
+        '''
         return f"{self.get_tipo_display()} - {self.producto.nombre} ({self.cantidad})" # type: ignore[attr-defined]
     
     class Meta:
