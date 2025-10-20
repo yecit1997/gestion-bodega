@@ -35,6 +35,7 @@ PROJECT_APPS = [
     'apps.categoria',
     'apps.proveedor',
     'apps.movimientos',
+    'apps.inventario',
 ]
 
 # Third party apps

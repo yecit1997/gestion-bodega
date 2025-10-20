@@ -1,7 +1,10 @@
-django
-djangorestframework
-Pillow
-# psycopg2-binary
-psycopg[binary]
-django-cors-headers
 python-dotenv
+django
+Pillow
+django-simple-history
+
+djangorestframework
+
+django-cors-headers
+
+psycopg[binary]

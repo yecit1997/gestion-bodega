@@ -1,4 +1,5 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
 from apps.categoria.models import Categoria
 from apps.proveedor.models import Proveedor
 
@@ -13,6 +14,7 @@ class Producto(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField(default=0)
     fecha_creacion = models.DateTimeField(auto_now_add=True,)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.nombre

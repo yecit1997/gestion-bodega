@@ -1,4 +1,5 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
 import uuid
 
 
@@ -7,6 +8,7 @@ class Categoria(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField(blank=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True,)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.nombre

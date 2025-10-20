@@ -1,4 +1,6 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
+
 from apps.producto.models import Producto
 
 import uuid
@@ -28,6 +30,7 @@ class Movimiento(models.Model):
     origen = models.CharField(max_length=20, choices=ORIGEN_CHOICES, default=MANUAL)
     fecha = models.DateTimeField(auto_now_add=True)
     observaciones = models.TextField(blank=True)
+    history = HistoricalRecords()
 
     def __str__(self):
         '''
